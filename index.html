@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asqent Technologies & Integrated Solutions | ICT Support, Networking & Digital Solutions in Nigeria</title>
+  <meta name="description" content="Asqent Technologies & Integrated Solutions — Elevating Technology. Empowering Progress. Reliable ICT support, networking & IT infrastructure, web development, CCTV, and digital solutions across Nigeria." />
+  <meta name="keywords" content="Asqent Technologies, Asqent Technologies & Integrated Solutions, ICT Support Nigeria, Networking Birnin Kebbi, Web Design Kebbi, IT Infrastructure Nigeria, CCTV Installation" />
+  <meta name="author" content="Asqent Technologies & Integrated Solutions" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Social Media Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Asqent Technologies & Integrated Solutions" />
+  <meta property="og:description" content="Elevating Technology. Empowering Progress. Reliable ICT Support, Networking, Web Development & Digital Solutions serving businesses across Nigeria." />
+  <meta property="og:site_name" content="Asqent Technologies & Integrated Solutions" />
+
+  <!-- Structured Data (JSON-LD) for Google Search & Local SEO Indexing -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ITService",
+    "name": "Asqent Technologies & Integrated Solutions",
+    "alternateName": "Asqent Technologies",
+    "description": "Elevating Technology. Empowering Progress. Reliable ICT support, networking & IT infrastructure, website design & development, software & hardware supply, and digital solutions serving businesses across Nigeria.",
+    "slogan": "Elevating Technology. Empowering Progress.",
+    "telephone": "+2348166472469",
+    "email": "asqent.technologies@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Near Shehu Kangiwa Road / Sani Abacha Bye Pass",
+      "addressLocality": "Birnin Kebbi",
+      "addressRegion": "Kebbi State",
+      "addressCountry": "NG"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Nigeria"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "sameAs": [
+      "https://www.instagram.com/asqent_technologies",
+      "https://x.com/Asqent_Tech",
+      "https://t.me/Asqent_Technologies"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              950: '#050B18',
+              900: '#0B162C',
+              800: '#10203F',
+              700: '#182E58',
+            },
+            cyan: {
+              electric: '#00D2FF',
+              teal: '#00A8E8',
+              deep: '#0077B6',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      background-color: #050B18;
+      color: #F8FAFC;
+      overflow-x: hidden;
+    }
+
+    /* Subtle Tech Circuit Grid Pattern */
+    .circuit-grid {
+      background-size: 48px 48px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 210, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 210, 255, 0.05) 1px, transparent 1px);
+    }
+
+    /* Glowing border and card hover transitions */
+    .service-card {
+      background: linear-gradient(145deg, rgba(16, 32, 63, 0.75) 0%, rgba(11, 22, 44, 0.9) 100%);
+      border: 1px solid rgba(0, 210, 255, 0.14);
+      backdrop-filter: blur(12px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .service-card:hover {
+      border-color: rgba(0, 210, 255, 0.55);
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px -15px rgba(0, 210, 255, 0.22);
+    }
+
+    /* Animated pulse for circuit nodes */
+    @keyframes nodePulse {
+      0%, 100% { opacity: 0.45; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.25); }
+    }
+    .pulse-node {
+      animation: nodePulse 3.5s infinite ease-in-out;
+      transform-origin: center;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-cyan-electric selection:text-navy-950">
+
+  <!-- Toast / Custom Notification Banner (Replaces alert()) -->
+  <div id="toast-notification" class="fixed bottom-5 right-5 z-50 hidden max-w-sm rounded-xl border border-cyan-electric/40 bg-navy-900/95 p-4 shadow-2xl backdrop-blur-md transition-all duration-300">
+    <div class="flex items-start gap-3">
+      <div class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-cyan-electric/20 text-cyan-electric">
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <div class="flex-1">
+        <p id="toast-title" class="text-sm font-semibold text-white">Action Completed</p>
+        <p id="toast-message" class="mt-1 text-xs text-slate-300">Your request has been prepared.</p>
+      </div>
+      <button onclick="hideToast()" class="text-slate-400 hover:text-white" aria-label="Close notification">
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- 1. STICKY NAVIGATION BAR -->
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-navy-950/85 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3.5 sm:px-6 lg:px-8">
+      <!-- Custom Brand Logo SVG -->
+      <a href="#top" class="group flex items-center gap-3 focus:outline-none">
+        <div class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-cyan-electric/30 bg-navy-900 shadow-lg shadow-cyan-electric/10 transition group-hover:border-cyan-electric/70">
+          <!-- Stylized 'A' with Circuit Nodes SVG -->
+          <svg class="h-8 w-8" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="asqentGrad" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#00D2FF" />
+                <stop offset="55%" stop-color="#00A8E8" />
+                <stop offset="100%" stop-color="#E2E8F0" />
+              </linearGradient>
+            </defs>
+            <!-- Outer Tech Ring -->
+            <path d="M46 13.5C41.8 10.6 36.8 9 31.5 9C18.5 9 8 19.5 8 32.5C8 45.5 18.5 56 31.5 56C37.2 56 42.4 53.9 46.5 50.5" stroke="#00A8E8" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.7" />
+            <!-- Stylized Letter A -->
+            <path d="M30 14L15 50H22.5L25.8 41.5H37.2L40.5 50H48L33 14H30ZM28 35.5L31.5 25.5L35 35.5H28Z" fill="url(#asqentGrad)" />
+            <!-- Circuit Traces & Nodes -->
+            <path d="M39 27H50L54 23" stroke="#00D2FF" stroke-width="2" stroke-linecap="round" />
+            <circle cx="55" cy="22" r="2.5" fill="#00D2FF" />
+            <path d="M42 33H54" stroke="#00D2FF" stroke-width="2" stroke-linecap="round" />
+            <circle cx="56" cy="33" r="2.5" fill="#E2E8F0" />
+            <path d="M44 39H50L54 43" stroke="#00D2FF" stroke-width="2" stroke-linecap="round" />
+            <circle cx="55" cy="44" r="2.5" fill="#00D2FF" />
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display text-lg font-extrabold tracking-wider text-white sm:text-xl">
+            AS<span class="text-cyan-electric">Q</span>ENT
+          </span>
+          <span class="text-[9px] font-semibold uppercase tracking-[0.18em] text-cyan-teal sm:text-[10px]">
+            Technologies &amp; Integrated Solutions
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden items-center gap-8 md:flex">
+        <a href="#services" class="text-sm font-medium text-slate-300 transition hover:text-cyan-electric">Services</a>
+        <a href="#about" class="text-sm font-medium text-slate-300 transition hover:text-cyan-electric">About Us</a>
+        <a href="#why-us" class="text-sm font-medium text-slate-300 transition hover:text-cyan-electric">Why Choose Us</a>
+        <a href="#contact" class="text-sm font-medium text-slate-300 transition hover:text-cyan-electric">Contact</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <a href="#quote-section" class="hidden rounded-xl border border-cyan-electric/40 bg-cyan-electric/10 px-4 py-2 text-xs font-semibold text-cyan-electric transition hover:bg-cyan-electric hover:text-navy-950 sm:inline-flex sm:text-sm">
+          Get a Quote
+        </a>
+        <a href="https://wa.me/2348166472469?text=Hello%20Asqent%20Technologies%20%26%20Integrated%20Solutions%2C%20I%20would%20like%20to%20inquire%20about%20your%20IT%20services." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-electric to-cyan-teal px-3.5 py-2.5 text-xs font-bold text-navy-950 shadow-lg shadow-cyan-electric/25 transition hover:brightness-110 sm:px-4 sm:text-sm">
+          <svg class="h-4 w-4 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+          </svg>
+          <span>WhatsApp Us</span>
+        </a>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="inline-flex items-center justify-center rounded-xl border border-white/10 bg-navy-900 p-2.5 text-slate-300 hover:text-white md:hidden" aria-label="Toggle Menu">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden border-t border-white/10 bg-navy-900 px-4 py-4 md:hidden">
+      <div class="flex flex-col space-y-3">
+        <a href="#services" class="mobile-nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-200 hover:bg-navy-800 hover:text-cyan-electric">Services</a>
+        <a href="#about" class="mobile-nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-200 hover:bg-navy-800 hover:text-cyan-electric">About Us</a>
+        <a href="#why-us" class="mobile-nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-200 hover:bg-navy-800 hover:text-cyan-electric">Why Choose Us</a>
+        <a href="#quote-section" class="mobile-nav-link rounded-lg px-3 py-2 text-sm font-medium text-cyan-electric hover:bg-navy-800">Request a Quote</a>
+        <a href="#contact" class="mobile-nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-200 hover:bg-navy-800 hover:text-cyan-electric">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION -->
+  <section id="top" class="relative isolate overflow-hidden circuit-grid pt-14 pb-20 sm:pt-24 sm:pb-28">
+    <!-- Ambient Radial Glows -->
+    <div class="pointer-events-none absolute -top-24 left-1/2 -z-10 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-cyan-electric/15 blur-[130px]"></div>
+    <div class="pointer-events-none absolute right-0 bottom-0 -z-10 h-[300px] w-[400px] rounded-full bg-cyan-deep/20 blur-[110px]"></div>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid items-center gap-12 lg:grid-cols-12">
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7">
+          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-electric/30 bg-navy-900/90 px-4 py-1.5 text-xs font-semibold tracking-wide text-cyan-electric shadow-sm">
+            <span class="h-2 w-2 rounded-full bg-cyan-electric pulse-node"></span>
+            <span>POWERING POSSIBILITIES THROUGH TECHNOLOGY</span>
+          </div>
+
+          <h1 class="font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl lg:leading-[1.12]">
+            Elevating Technology.<br />
+            <span class="bg-gradient-to-r from-cyan-electric via-cyan-teal to-slate-200 bg-clip-text text-transparent">
+              Empowering Progress.
+            </span>
+          </h1>
+
+          <p class="mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+            We deliver reliable <strong class="font-semibold text-white">ICT Support, Enterprise Networking, Web Development, and Integrated Digital Solutions</strong> tailored to keep organizations, institutions, and businesses across Nigeria secure, connected, and future-ready.
+          </p>
+
+          <!-- Dual CTAs -->
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <a href="#services" class="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-electric to-cyan-teal px-7 py-4 text-sm font-bold text-navy-950 shadow-xl shadow-cyan-electric/25 transition hover:brightness-110">
+              <span>Explore Our Services</span>
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+
+            <a href="https://wa.me/2348166472469?text=Hello%20Asqent%20Technologies%2C%20I%20would%20like%20to%20discuss%20an%20IT%20project%20or%20support%20request." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 rounded-xl border border-slate-700 bg-navy-900/90 px-7 py-4 text-sm font-semibold text-white transition hover:border-cyan-electric/60 hover:bg-navy-800">
+              <span class="h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
+              <span>Chat on WhatsApp: 0816 647 2469</span>
+            </a>
+          </div>
+
+          <!-- Trust Pills -->
+          <div class="mt-10 grid grid-cols-3 gap-4 border-t border-white/10 pt-8 sm:max-w-lg">
+            <div>
+              <p class="font-display text-xl font-extrabold text-white sm:text-2xl">24/7</p>
+              <p class="mt-0.5 text-xs text-slate-400">On-Site &amp; Remote Support</p>
+            </div>
+            <div>
+              <p class="font-display text-xl font-extrabold text-cyan-electric sm:text-2xl">100%</p>
+              <p class="mt-0.5 text-xs text-slate-400">Nationwide Coverage</p>
+            </div>
+            <div>
+              <p class="font-display text-xl font-extrabold text-white sm:text-2xl">6+</p>
+              <p class="mt-0.5 text-xs text-slate-400">Core Tech Verticals</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual Tech Card -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl border border-cyan-electric/25 bg-gradient-to-b from-navy-800/90 to-navy-950/95 p-6 shadow-2xl backdrop-blur-xl sm:p-8">
+            <!-- Decorative Top Bar -->
+            <div class="mb-6 flex items-center justify-between border-b border-white/10 pb-4">
+              <div class="flex items-center gap-2">
+                <span class="h-3 w-3 rounded-full bg-rose-500/80"></span>
+                <span class="h-3 w-3 rounded-full bg-amber-400/80"></span>
+                <span class="h-3 w-3 rounded-full bg-emerald-400/80"></span>
+              </div>
+              <span class="font-mono text-xs text-cyan-electric">ASQENT // CORE_SYSTEMS</span>
+            </div>
+
+            <!-- Interactive Capability Highlights -->
+            <div class="space-y-4">
+              <div class="flex items-start gap-4 rounded-xl border border-white/5 bg-navy-900/90 p-4">
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cyan-electric/15 text-cyan-electric">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-sm font-bold text-white">Enterprise IT &amp; Network Security</h3>
+                  <p class="mt-1 text-xs leading-relaxed text-slate-400">Structured LAN/Wi-Fi architecture, CCTV surveillance, access control, and server management.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 rounded-xl border border-white/5 bg-navy-900/90 p-4">
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cyan-electric/15 text-cyan-electric">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-sm font-bold text-white">Modern Web &amp; Digital Transformation</h3>
+                  <p class="mt-1 text-xs leading-relaxed text-slate-400">Custom responsive corporate websites, cloud workspace email setup, and cohesive brand identity.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 rounded-xl border border-white/5 bg-navy-900/90 p-4">
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cyan-electric/15 text-cyan-electric">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-sm font-bold text-white">Rapid Hardware &amp; ICT Maintenance</h3>
+                  <p class="mt-1 text-xs leading-relaxed text-slate-400">Diagnostics, genuine software deployment, workstation procurement, and preventive maintenance.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Location Pill -->
+            <div class="mt-6 flex items-center justify-between rounded-xl border border-cyan-electric/20 bg-cyan-electric/5 px-4 py-3 text-xs">
+              <span class="flex items-center gap-2 font-medium text-slate-200">
+                <svg class="h-4 w-4 text-cyan-electric" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Birnin Kebbi, Kebbi State • Serving Nigeria
+              </span>
+              <span class="font-semibold text-cyan-electric">Active</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. CORE SERVICES GRID (6 CARDS) -->
+  <section id="services" class="relative border-t border-white/10 bg-navy-900/50 py-20 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-cyan-electric">What We Do</span>
+        <h2 class="mt-2 font-display text-3xl font-extrabold text-white sm:text-4xl">
+          Comprehensive Technology &amp; Integrated Solutions
+        </h2>
+        <p class="mt-4 text-base text-slate-300">
+          From day-to-day technical support to full-scale network infrastructure and digital brand deployment, we provide end-to-end solutions built for reliability.
+        </p>
+      </div>
+
+      <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Service 1: ICT Support & Maintenance -->
+        <div class="service-card flex flex-col justify-between rounded-2xl p-7">
+          <div>
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-electric/15 text-cyan-electric">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white">ICT Support &amp; Maintenance</h3>
+            <p class="mt-2 text-sm text-slate-400">
+              Proactive troubleshooting and technical maintenance to eliminate costly workstation downtime.
+            </p>
+            <ul class="mt-5 space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Computer &amp; laptop repair
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Software installation &amp; configuration
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Virus removal &amp; system optimization
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Printer installation &amp; support
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6 border-t border-white/10 pt-4">
+            <button onclick="selectServiceForQuote('ICT Support & Maintenance')" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-cyan-electric hover:text-white">
+              <span>Request Support</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Service 2: Networking & IT Infrastructure -->
+        <div class="service-card flex flex-col justify-between rounded-2xl p-7">
+          <div>
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-electric/15 text-cyan-electric">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white">Networking &amp; IT Infrastructure</h3>
+            <p class="mt-2 text-sm text-slate-400">
+              High-speed, resilient network architecture and physical security integrations for modern facilities.
+            </p>
+            <ul class="mt-5 space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Network design &amp; structured installation
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Enterprise Wi-Fi setup &amp; optimization
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Server &amp; data backup management
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                CCTV surveillance &amp; access control
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6 border-t border-white/10 pt-4">
+            <button onclick="selectServiceForQuote('Networking & IT Infrastructure')" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-cyan-electric hover:text-white">
+              <span>Request Installation</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Service 3: Website Design & Development -->
+        <div class="service-card flex flex-col justify-between rounded-2xl p-7">
+          <div>
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-electric/15 text-cyan-electric">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white">Website Design &amp; Development</h3>
+            <p class="mt-2 text-sm text-slate-400">
+              Fast, mobile-responsive websites engineered to rank on Google and convert visitors into clients.
+            </p>
+            <ul class="mt-5 space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Responsive corporate websites
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Custom web applications &amp; portals
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Domain registration &amp; cloud hosting
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                SEO optimization &amp; SSL security
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6 border-t border-white/10 pt-4">
+            <button onclick="selectServiceForQuote('Website Design & Development')" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-cyan-electric hover:text-white">
+              <span>Start a Web Project</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Service 4: Digital Solutions & Branding -->
+        <div class="service-card flex flex-col justify-between rounded-2xl p-7">
+          <div>
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-electric/15 text-cyan-electric">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white">Digital Solutions &amp; Branding</h3>
+            <p class="mt-2 text-sm text-slate-400">
+              Cohesive visual identity and cloud communication tools that elevate your corporate reputation.
+            </p>
+            <ul class="mt-5 space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Graphics &amp; corporate brand identity
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Social media setup &amp; management
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Google Workspace &amp; custom business email
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Digital marketing collateral &amp; flyers
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6 border-t border-white/10 pt-4">
+            <button onclick="selectServiceForQuote('Digital Solutions & Branding')" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-cyan-electric hover:text-white">
+              <span>Elevate Your Brand</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Service 5: Software & Hardware Supply -->
+        <div class="service-card flex flex-col justify-between rounded-2xl p-7">
+          <div>
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-electric/15 text-cyan-electric">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white">Software &amp; Hardware Supply</h3>
+            <p class="mt-2 text-sm text-slate-400">
+              Reliable procurement of enterprise-grade computers, networking gear, and genuine software licenses.
+            </p>
+            <ul class="mt-5 space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Business computers, laptops &amp; workstations
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Routers, switches &amp; networking equipment
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Genuine OS &amp; productivity licenses
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Printers, UPS &amp; quality accessories
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6 border-t border-white/10 pt-4">
+            <button onclick="selectServiceForQuote('Software & Hardware Supply')" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-cyan-electric hover:text-white">
+              <span>Request Equipment Quote</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Service 6: IT Consultancy & Training -->
+        <div class="service-card flex flex-col justify-between rounded-2xl p-7">
+          <div>
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-electric/15 text-cyan-electric">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white">IT Consultancy &amp; Training</h3>
+            <p class="mt-2 text-sm text-slate-400">
+              Strategic technology roadmaps and practical staff training to maximize your IT investments.
+            </p>
+            <ul class="mt-5 space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Comprehensive IT infrastructure audits
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Enterprise digital transformation strategy
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Staff digital literacy &amp; cybersecurity awareness
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 rounded-full bg-cyan-electric"></span>
+                Managed IT retainer advisory
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6 border-t border-white/10 pt-4">
+            <button onclick="selectServiceForQuote('IT Consultancy & Training')" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-cyan-electric hover:text-white">
+              <span>Book a Consultation</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. ABOUT & WHY CHOOSE ASQENT SECTION -->
+  <section id="about" class="relative border-t border-white/10 py-20 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid items-center gap-12 lg:grid-cols-12">
+        <!-- About Narrative -->
+        <div class="lg:col-span-6">
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-cyan-electric">About Asqent Technologies</span>
+          <h2 class="mt-2 font-display text-3xl font-extrabold text-white sm:text-4xl">
+            Your Trusted Technology Partner in Kebbi State &amp; Across Nigeria
+          </h2>
+          <p class="mt-5 text-base leading-relaxed text-slate-300">
+            Headquartered in <strong class="text-white">Birnin Kebbi, Kebbi State</strong> (near Shehu Kangiwa Road / Sani Abacha Bye Pass), <strong class="text-white">Asqent Technologies &amp; Integrated Solutions</strong> was founded with a clear mission: to bridge the gap between modern enterprise technology and everyday business operations.
+          </p>
+          <p class="mt-4 text-base leading-relaxed text-slate-300">
+            Whether you are setting up a new office network, securing premises with CCTV surveillance, launching a corporate web presence, or maintaining critical computer systems, our team delivers dependable engineering with transparent pricing.
+          </p>
+
+          <!-- Core Values Badges -->
+          <div id="why-us" class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
+            <div class="rounded-xl border border-cyan-electric/20 bg-navy-900/90 p-4">
+              <p class="font-display text-sm font-bold text-cyan-electric">Reliable</p>
+              <p class="mt-1 text-xs text-slate-400">Built for consistent uptime &amp; long-term stability.</p>
+            </div>
+            <div class="rounded-xl border border-cyan-electric/20 bg-navy-900/90 p-4">
+              <p class="font-display text-sm font-bold text-cyan-electric">Secure</p>
+              <p class="mt-1 text-xs text-slate-400">Data protection &amp; hardened network standards.</p>
+            </div>
+            <div class="rounded-xl border border-cyan-electric/20 bg-navy-900/90 p-4">
+              <p class="font-display text-sm font-bold text-cyan-electric">Professional</p>
+              <p class="mt-1 text-xs text-slate-400">Certified, clean execution on every deployment.</p>
+            </div>
+            <div class="rounded-xl border border-cyan-electric/20 bg-navy-900/90 p-4">
+              <p class="font-display text-sm font-bold text-cyan-electric">Fast Response</p>
+              <p class="mt-1 text-xs text-slate-400">Rapid on-site dispatch &amp; instant remote helpdesk.</p>
+            </div>
+            <div class="col-span-2 rounded-xl border border-cyan-electric/20 bg-navy-900/90 p-4">
+              <p class="font-display text-sm font-bold text-cyan-electric">Nationwide Service</p>
+              <p class="mt-1 text-xs text-slate-400">Proudly serving SMEs, schools, NGOs, and government institutions across Nigeria.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Service Delivery Process -->
+        <div class="lg:col-span-6">
+          <div class="rounded-2xl border border-white/10 bg-navy-900/80 p-6 sm:p-8">
+            <h3 class="font-display text-xl font-bold text-white">How We Work With You</h3>
+            <p class="mt-1 text-sm text-slate-400">A streamlined, transparent approach from initial inquiry to deployment.</p>
+
+            <div class="mt-7 space-y-6">
+              <div class="flex gap-4">
+                <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-cyan-electric font-display text-sm font-extrabold text-navy-950">
+                  1
+                </div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Assessment &amp; Consultation</h4>
+                  <p class="mt-1 text-sm text-slate-400">We listen to your goals, inspect existing systems if needed, and identify the exact technical requirements.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-cyan-electric font-display text-sm font-extrabold text-navy-950">
+                  2
+                </div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Tailored Proposal &amp; Clear Quote</h4>
+                  <p class="mt-1 text-sm text-slate-400">You receive an itemized, honest quotation with genuine hardware/software specifications and realistic timelines.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-cyan-electric font-display text-sm font-extrabold text-navy-950">
+                  3
+                </div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Clean Implementation &amp; Testing</h4>
+                  <p class="mt-1 text-sm text-slate-400">Our engineers execute the installation, configuration, or development with rigorous quality assurance.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-cyan-electric font-display text-sm font-extrabold text-navy-950">
+                  4
+                </div>
+                <div>
+                  <h4 class="text-base font-bold text-white">Ongoing Support &amp; Maintenance</h4>
+                  <p class="mt-1 text-sm text-slate-400">We stand behind our work with responsive after-sales support via WhatsApp, phone, remote access, or on-site visits.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. INTERACTIVE SERVICE REQUEST / QUICK QUOTE FORM -->
+  <section id="quote-section" class="relative border-t border-white/10 bg-navy-900/60 py-20 sm:py-24 circuit-grid">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl border border-cyan-electric/30 bg-navy-950/95 p-6 shadow-2xl backdrop-blur-xl sm:p-10 lg:p-12">
+        <div class="mx-auto max-w-2xl text-center">
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-cyan-electric">Instant Quote &amp; Support</span>
+          <h2 class="mt-2 font-display text-3xl font-extrabold text-white sm:text-4xl">
+            Let’s Power Your Next Project
+          </h2>
+          <p class="mt-3 text-sm text-slate-300 sm:text-base">
+            Fill out the quick request below and send it directly to our engineering desk via <strong class="text-white">WhatsApp</strong> or <strong class="text-white">Email</strong> in one click.
+          </p>
+        </div>
+
+        <form id="quote-form" class="mt-10 space-y-6" onsubmit="event.preventDefault();">
+          <div class="grid gap-6 sm:grid-cols-2">
+            <!-- Full Name / Organization -->
+            <div>
+              <label for="client-name" class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
+                Your Name / Organization *
+              </label>
+              <input type="text" id="client-name" required placeholder="e.g., Musa Abdullahi / Kebbi Tech Hub" class="mt-2 w-full rounded-xl border border-white/15 bg-navy-900 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-cyan-electric focus:outline-none focus:ring-1 focus:ring-cyan-electric" />
+            </div>
+
+            <!-- Phone or Email -->
+            <div>
+              <label for="client-contact" class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
+                Phone Number or Email *
+              </label>
+              <input type="text" id="client-contact" required placeholder="e.g., 0803 000 0000 or name@company.com" class="mt-2 w-full rounded-xl border border-white/15 bg-navy-900 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-cyan-electric focus:outline-none focus:ring-1 focus:ring-cyan-electric" />
+            </div>
+          </div>
+
+          <div class="grid gap-6 sm:grid-cols-2">
+            <!-- Service Category -->
+            <div>
+              <label for="service-category" class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
+                Service Required
+              </label>
+              <select id="service-category" class="mt-2 w-full rounded-xl border border-white/15 bg-navy-900 px-4 py-3 text-sm text-white focus:border-cyan-electric focus:outline-none focus:ring-1 focus:ring-cyan-electric">
+                <option value="ICT Support & Maintenance">ICT Support &amp; Maintenance</option>
+                <option value="Networking & IT Infrastructure">Networking &amp; IT Infrastructure</option>
+                <option value="Website Design & Development">Website Design &amp; Development</option>
+                <option value="Digital Solutions & Branding">Digital Solutions &amp; Branding</option>
+                <option value="Software & Hardware Supply">Software &amp; Hardware Supply</option>
+                <option value="IT Consultancy & Training">IT Consultancy &amp; Training</option>
+              </select>
+            </div>
+
+            <!-- Location / Delivery Mode -->
+            <div>
+              <label for="client-location" class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
+                City / State (or Remote)
+              </label>
+              <input type="text" id="client-location" placeholder="e.g., Birnin Kebbi, Abuja, Remote..." class="mt-2 w-full rounded-xl border border-white/15 bg-navy-900 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-cyan-electric focus:outline-none focus:ring-1 focus:ring-cyan-electric" />
+            </div>
+          </div>
+
+          <!-- Project Details -->
+          <div>
+            <label for="project-details" class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
+              Project or Support Details *
+            </label>
+            <textarea id="project-details" rows="4" required placeholder="Briefly describe what you need (e.g., Office Wi-Fi & CCTV setup for 15 staff, corporate website design, laptop repairs, or hardware quote)..." class="mt-2 w-full rounded-xl border border-white/15 bg-navy-900 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-cyan-electric focus:outline-none focus:ring-1 focus:ring-cyan-electric"></textarea>
+          </div>
+
+          <!-- Dual Submission Actions -->
+          <div class="flex flex-col gap-4 pt-2 sm:flex-row">
+            <button type="button" onclick="sendViaWhatsApp()" class="flex flex-1 items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-cyan-electric to-cyan-teal px-6 py-4 text-sm font-bold text-navy-950 shadow-lg shadow-cyan-electric/25 transition hover:brightness-110">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+              </svg>
+              <span>Send Instant Request via WhatsApp</span>
+            </button>
+
+            <button type="button" onclick="sendViaEmail()" class="flex flex-1 items-center justify-center gap-2.5 rounded-xl border border-cyan-electric/40 bg-navy-900 px-6 py-4 text-sm font-bold text-white transition hover:border-cyan-electric hover:bg-navy-800">
+              <svg class="h-5 w-5 text-cyan-electric" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span>Send via Email</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FOOTER & SOCIAL LINKS -->
+  <footer id="contact" class="border-t border-white/10 bg-navy-950 pt-16 pb-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-12">
+        <!-- Brand Column -->
+        <div class="lg:col-span-5">
+          <div class="flex items-center gap-3">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-electric/30 bg-navy-900">
+              <span class="font-display text-lg font-extrabold text-cyan-electric">A</span>
+            </div>
+            <div>
+              <p class="font-display text-lg font-extrabold tracking-wider text-white">
+                AS<span class="text-cyan-electric">Q</span>ENT
+              </p>
+              <p class="text-[10px] font-semibold uppercase tracking-[0.16em] text-cyan-teal">
+                Technologies &amp; Integrated Solutions
+              </p>
+            </div>
+          </div>
+          <p class="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">
+            Elevating Technology. Empowering Progress. Delivering dependable ICT support, networking infrastructure, web development, and digital solutions across Nigeria.
+          </p>
+
+          <!-- Direct Contact Cards -->
+          <div class="mt-6 space-y-2.5 text-sm">
+            <div class="flex items-center gap-3 text-slate-300">
+              <svg class="h-4 w-4 shrink-0 text-cyan-electric" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <a href="tel:+2348166472469" class="hover:text-cyan-electric">+234 816 647 2469</a>
+              <button onclick="copyToClipboard('+2348166472469', 'Phone Number')" class="rounded bg-white/5 px-2 py-0.5 text-[11px] text-slate-400 hover:bg-white/10 hover:text-white">Copy</button>
+            </div>
+
+            <div class="flex items-center gap-3 text-slate-300">
+              <svg class="h-4 w-4 shrink-0 text-cyan-electric" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <a href="mailto:asqent.technologies@gmail.com" class="hover:text-cyan-electric">asqent.technologies@gmail.com</a>
+              <button onclick="copyToClipboard('asqent.technologies@gmail.com', 'Email Address')" class="rounded bg-white/5 px-2 py-0.5 text-[11px] text-slate-400 hover:bg-white/10 hover:text-white">Copy</button>
+            </div>
+
+            <div class="flex items-start gap-3 text-slate-300">
+              <svg class="mt-1 h-4 w-4 shrink-0 text-cyan-electric" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>Near Shehu Kangiwa Road / Sani Abacha Bye Pass, Birnin Kebbi, Kebbi State, Nigeria</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="lg:col-span-3">
+          <h4 class="font-display text-sm font-bold uppercase tracking-wider text-white">Quick Navigation</h4>
+          <ul class="mt-4 space-y-2.5 text-sm text-slate-400">
+            <li><a href="#services" class="transition hover:text-cyan-electric">ICT Support &amp; Maintenance</a></li>
+            <li><a href="#services" class="transition hover:text-cyan-electric">Networking &amp; CCTV</a></li>
+            <li><a href="#services" class="transition hover:text-cyan-electric">Website Design &amp; Hosting</a></li>
+            <li><a href="#services" class="transition hover:text-cyan-electric">Digital Branding &amp; Workspace</a></li>
+            <li><a href="#quote-section" class="transition hover:text-cyan-electric">Request a Project Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Official Social Media Profiles (Cross-linked for SEO) -->
+        <div class="lg:col-span-4">
+          <h4 class="font-display text-sm font-bold uppercase tracking-wider text-white">Connect With Us</h4>
+          <p class="mt-3 text-xs text-slate-400">Follow our official channels for tech tips, project updates, and instant support:</p>
+
+          <div class="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/asqent_technologies" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 rounded-xl border border-white/10 bg-navy-900 px-3.5 py-2.5 text-xs font-medium text-slate-200 transition hover:border-cyan-electric/50 hover:text-cyan-electric">
+              <svg class="h-4 w-4 text-cyan-electric" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span class="truncate">@asqent_technologies</span>
+            </a>
+
+            <!-- X / Twitter -->
+            <a href="https://x.com/Asqent_Tech" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 rounded-xl border border-white/10 bg-navy-900 px-3.5 py-2.5 text-xs font-medium text-slate-200 transition hover:border-cyan-electric/50 hover:text-cyan-electric">
+              <svg class="h-4 w-4 text-cyan-electric" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              <span class="truncate">@Asqent_Tech</span>
+            </a>
+
+            <!-- Telegram -->
+            <a href="https://t.me/Asqent_Technologies" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 rounded-xl border border-white/10 bg-navy-900 px-3.5 py-2.5 text-xs font-medium text-slate-200 transition hover:border-cyan-electric/50 hover:text-cyan-electric">
+              <svg class="h-4 w-4 text-cyan-electric" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+              </svg>
+              <span class="truncate">@Asqent_Technologies</span>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/search/top?q=Asqent%20Technologies%20%26%20Integrated%20Solutions" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 rounded-xl border border-white/10 bg-navy-900 px-3.5 py-2.5 text-xs font-medium text-slate-200 transition hover:border-cyan-electric/50 hover:text-cyan-electric">
+              <svg class="h-4 w-4 text-cyan-electric" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+              </svg>
+              <span class="truncate">Asqent Technologies</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-slate-500 sm:flex-row">
+        <p>&copy; <span id="current-year"></span> Asqent Technologies &amp; Integrated Solutions. All rights reserved.</p>
+        <p>Elevating Technology. Empowering Progress.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Scripts -->
+  <script>
+    // Set current copyright year dynamically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Custom Toast Notification Handler (No alert() used)
+    let toastTimeout;
+    function showToast(title, message) {
+      const toast = document.getElementById('toast-notification');
+      document.getElementById('toast-title').textContent = title;
+      document.getElementById('toast-message').textContent = message;
+      toast.classList.remove('hidden');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        hideToast();
+      }, 4500);
+    }
+
+    function hideToast() {
+      document.getElementById('toast-notification').classList.add('hidden');
+    }
+
+    // Copy Contact Info to Clipboard using execCommand fallback
+    function copyToClipboard(text, label) {
+      try {
+        const tempInput = document.createElement('textarea');
+        tempInput.value = text;
+        tempInput.style.position = 'fixed';
+        tempInput.style.opacity = '0';
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        showToast(`${label} Copied`, `${text} has been copied to your clipboard.`);
+      } catch (err) {
+        showToast('Copy Info', `Please copy manually: ${text}`);
+      }
+    }
+
+    // Pre-select a service from the cards and scroll smoothly to the quote form
+    function selectServiceForQuote(serviceName) {
+      const selectEl = document.getElementById('service-category');
+      if (selectEl) {
+        selectEl.value = serviceName;
+      }
+      const quoteSection = document.getElementById('quote-section');
+      if (quoteSection) {
+        quoteSection.scrollIntoView({ behavior: 'smooth' });
+      }
+      showToast('Service Selected', `Ready to request a quote for ${serviceName}.`);
+    }
+
+    // Validate Form Fields
+    function getValidatedFormData() {
+      const name = document.getElementById('client-name').value.trim();
+      const contact = document.getElementById('client-contact').value.trim();
+      const service = document.getElementById('service-category').value;
+      const location = document.getElementById('client-location').value.trim() || 'Not specified';
+      const details = document.getElementById('project-details').value.trim();
+
+      if (!name || !contact || !details) {
+        showToast('Missing Information', 'Please enter your Name, Contact Info, and Project Details first.');
+        return null;
+      }
+
+      return { name, contact, service, location, details };
+    }
+
+    // Format and open WhatsApp message to Asqent (+234 816 647 2469)
+    function sendViaWhatsApp() {
+      const data = getValidatedFormData();
+      if (!data) return;
+
+      const message = [
+        `*NEW SERVICE / QUOTE REQUEST*`,
+        `*To:* Asqent Technologies & Integrated Solutions`,
+        `-----------------------------`,
+        `*Name / Org:* ${data.name}`,
+        `*Contact:* ${data.contact}`,
+        `*Service:* ${data.service}`,
+        `*Location:* ${data.location}`,
+        `*Details:* ${data.details}`
+      ].join('\n');
+
+      const whatsappUrl = `https://wa.me/2348166472469?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+      showToast('Opening WhatsApp', 'Your formatted quote request is ready to send.');
+    }
+
+    // Format and open Email client to asqent.technologies@gmail.com
+    function sendViaEmail() {
+      const data = getValidatedFormData();
+      if (!data) return;
+
+      const subject = `Service Inquiry: ${data.service} - ${data.name}`;
+      const body = [
+        `Hello Asqent Technologies & Integrated Solutions,`,
+        ``,
+        `I would like to request a quote / consultation with the following details:`,
+        ``,
+        `Name / Organization: ${data.name}`,
+        `Contact Info: ${data.contact}`,
+        `Service Required: ${data.service}`,
+        `Location: ${data.location}`,
+        ``,
+        `Project / Support Details:`,
+        `${data.details}`,
+        ``,
+        `Best regards,`,
+        `${data.name}`
+      ].join('\n');
+
+      const mailtoUrl = `mailto:asqent.technologies@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoUrl;
+      showToast('Opening Email App', 'Your message to asqent.technologies@gmail.com has been prepared.');
+    }
+  </script>
+</body>
+</html>
